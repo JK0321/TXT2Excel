@@ -4,7 +4,7 @@ import xlrd
 book = xlwt.Workbook()
 ws = book.add_sheet('Sheet_Name') # This is the name you want to label your excel sheet.
 
-f = open('Your_File.txt', 'r+') # This is the name of the file you want want exported from .txt to .xls
+f = open('Your_File.txt', 'r+') # This is the name of the file you want saved from .txt to .xls
 
 data = f.readlines()
 for i in range(len(data)):
@@ -13,5 +13,5 @@ for i in range(len(data)):
     for j in range(len(row)):
         ws.write(i, j, row[j])
 
-book.save('Your_File.xls') # This is the name of the file you want saved as .xls from .txt
+book.save('Your_File.xls') # This is the name of the new file you want saved as .xls from .txt
 f.close()
